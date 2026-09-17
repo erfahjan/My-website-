@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html, body {
+            margin: 0;
+            background-color: black;
+            font-family: Arial, sans-serif;
+            color: white;
+            scroll-behavior: smooth;
+            overflow-y: scroll;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+
+        html::-webkit-scrollbar,
+        body::-webkit-scrollbar {
+            display: none;
+        }
+
+        .container {
+            display: flex;
+            width: 100%;
+            margin: 0;
+        }
+
+        .block1 {
+            width: 25%;
+            min-width: 120px;
+            height: 100px;
+            background-color: rgb(136, 218, 237);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .block1 img {
+            height: 100%;
+            width: 100%;
+            object-fit: contain;
+        }
+
+        .block2 {
+            width: 75%;
+            height: 100px;
+            background-color: rgba(20, 32, 35, 0.738);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 20px;
+        }
+
+        .block2 h2 {
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .block2 a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
+
+        .block3 {
+            width: 100%;
+            margin: 0;
+            background-image: url(bodyback.jpg);
+            background-size: cover;
+            background-position: center;
+            padding: 20px 10px 30px;
+        }
+
+        .block3 h2 {
+            text-align: center;
+            margin: 0 0 20px;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(220px, 1fr));
+            gap: 20px;
+            align-items: start;
+        }
+
+        .block4,
+        .block6,
+        .block7 {
+            background-color: rgba(215, 214, 219, 0.75);
+            opacity: 0.9;
+            border-radius: 10px;
+            border: 5px solid rgba(15, 1, 1, 0.892);
+            overflow-y: auto;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+            height: 440px;
+            padding: 10px 20px;
+            color: black;
+        }
+
+        .block4::-webkit-scrollbar,
+        .block6::-webkit-scrollbar,
+        .block7::-webkit-scrollbar {
+            display: none;
+        }
+
+        .block4 ul,
+        .block6 ul,
+        .block7 ul {
+            padding-left: 20px;
+            margin: 0;
+        }
+
+        .block4 li,
+        .block6 li,
+        .block7 li {
+            margin: 8px 0;
+            font-weight: 600;
+        }
+
+        .footer {
+            width: 100%;
+            margin: 0;
+            background-color: rgb(1, 1, 5);
+            color: white;
+            padding: 20px;
+        }
+
+        .footer h2,
+        .footer p {
+            margin: 8px 0;
+        }
+
+        @media (max-width: 900px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .block1,
+            .block2 {
+                width: 100%;
+            }
+
+            .block2 {
+                height: auto;
+                padding: 15px 10px;
+            }
+
+            .menu-grid {
+                grid-template-columns: repeat(2, minmax(220px, 1fr));
+            }
+        }
+
+        @media (max-width: 600px) {
+            .menu-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .block2 h2 {
+                gap: 10px;
+            }
+
+            .block2 a {
+                font-size: 0.95rem;
+            }
+        }
+          .logout-menu{
+     position: relative;
+     display: inline-block;
+     margin-left: 12px;
+    }
+    .logout-menu summary{
+     color: white;
+     cursor: pointer;
+     list-style: none;
+     font-size: 28px;
+     line-height: 20px;
+    }
+   
+    
+    .logout-menu a{
+     position: absolute;
+     right: 0;
+     top: 32px;
+     z-index: 2;
+     min-width: 90px;
+     padding: 8px 12px;
+     color: white;
+     background-color: rgb(7, 11, 7);
+     border-radius: 4px;
+     text-decoration: none;
+     font-size: 16px;
+     text-align: center;
+    }
+     
+
+    </style>
+</head>
+<body>
+    
+
+<div class="container">
+    <div class="block1"><img src="pngwing.com.png">
+    </div>
+    <div class="block2">
+      <h2> <a href="home.html">Home</a>
+        <a href="order.html">Order</a>
+        <a href="menu.html">Menu</a>
+       <details class="logout-menu">
+                    <summary aria-label="Open account menu">&#9776;</summary>
+                    <a href="index.html">Log out</a>
+                </details>
+      </h2>
+      
+    </div>
+</div>
+<div class="block3">
+    <h2>Welcome to my new restaurant</h2>
+
+    <div class="menu-grid">
+        <div class="block4">
+            <ul>
+                <h2>Spicy</h2>
+                <li>🌶️ Chicken Biryani</li>
+                <li>🍗 Chicken Tikka</li>
+                <li>🌶️ Chilli Chicken</li>
+                <li>🍗 Chicken Korma</li>
+                <li>🍛 Kadhai Chicken</li>
+                <li>🍗 Tandoori Chicken</li>
+                <li>🌶️ Hot & Spicy Wings</li>
+                <li>🌶️ Masala Momos</li>
+                <li>🍜 Schezwan Noodles</li>
+                <li>🥘 Mutton Rogan Josh</li>
+                <li>🌶️ Mutton Curry</li>
+                <li>🌶️ Chicken Biryani</li>
+                <li>🍗 Chicken Tikka</li>
+                <li>🌶️ Chilli Chicken</li>
+            </ul>
+        </div>
+
+        <div class="block6">
+            <ul>
+                <h2>Non-Spicy</h2>
+                <li>🍗 Butter Chicken</li>
+                <li>🥘 Chicken Korma</li>
+                <li>🍛 Chicken Curry</li>
+                <li>🥘 Paneer Butter Masala</li>
+                <li>🍛 Dal Makhani</li>
+                <li>🥘 Veg Biryani</li>
+                <li>🍛 Veg Pulao</li>
+                <li>🥘 Aloo Gobi</li>
+                <li>🍛 Chana Masala</li>
+                <li>🥘 Palak Paneer</li>
+                <li>🍛 Rajma Masala</li>
+                <li>🥘 Malai Kofta</li>
+            </ul>
+        </div>
+
+        <div class="block7">
+            <ul>
+                <h2>Drinks/Fast Food</h2>
+                <li>🥤 Soft Drinks</li>
+                <li>🍹 Mocktails</li>
+                <li>🍵 Tea</li>
+                <li>☕ Coffee</li>
+                <li>🥛 Milkshakes</li>
+                <li>🍷 Wine</li>
+                <li>🍺 Beer</li>
+                <li>🥂 Cocktails</li>
+                <li>🍸 Martini</li>
+                <li>🥃 Whiskey</li>
+                <li>🍾 Champagne</li>
+                <li>🥤 Lemonade</li>
+                <li>🍹 Mojito</li>
+                <li>🍵 Green Tea</li>
+                <li>☕ Cappuccino</li>
+                <li>🍔 Burger</li>
+                <li>🍕 Pizza</li>
+                <li>🍟 French Fries</li>
+                <li>🌭 Hot Dog</li>
+                <li>🌯 Chicken Wrap</li>
+                <li>🍗 Chicken Wings</li>
+                <li>🍜 Chowmein</li>
+                <li>🥟 Momos</li>
+                <li>🥪 Sandwich</li>
+                <li>🍥 Spring Roll</li>
+                <li>🥖 Garlic Bread</li>
+                <li>🧀 Cheese Balls</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+    <h2>About us:</h2>
+    <h3>📞 Customer Care</h3>
+    <p>📧 Email: fsaifi1227@gmail.com</p>
+    <p>📱 Phone: +91 6395355632</p>
+    <p>🕐 Support Time: 10:00 AM - 10:00 PM</p>
+</div>
+</body>
+</html>
