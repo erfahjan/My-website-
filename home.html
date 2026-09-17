@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background-color: rgb(5, 20, 5);
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+        }
+
+        .container {
+            display: flex;
+            width: 100%;
+            margin: 0;
+        }
+
+        .block1 {
+            width: 30%;
+            height: 100px;
+            margin: 0;
+            text-align: center;
+            background-color: rgb(136, 218, 237);
+        }
+
+        .block1 img {
+            display: block;
+            width: 100%;
+            height: 100px;
+            object-fit: contain;
+        }
+
+        .block2 {
+            width: 70%;
+            margin: 0;
+            height: 100px;
+            background-color: rgba(20, 32, 35, 0.738);
+            text-align: center;
+        }
+
+        .block2 img {
+            height: 100px;
+        }
+
+        .block2 h2 {
+            height: 100%;
+            width: auto;
+            margin: 0;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            gap: clamp(16px, 4vw, 60px);
+            box-sizing: border-box;
+            flex-wrap: wrap;
+        }
+
+        .block2 a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .logout-menu {
+            position: relative;
+            display: inline-block;
+        }
+
+        .logout-menu summary {
+            color: white;
+            cursor: pointer;
+            list-style: none;
+            font-size: 28px;
+            line-height: 20px;
+        }
+
+        .logout-menu a {
+            position: absolute;
+            right: 0;
+            top: 32px;
+            z-index: 2;
+            min-width: 90px;
+            padding: 8px 12px;
+            color: white;
+            background-color: rgb(7, 11, 7);
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 16px;
+            text-align: center;
+        }
+
+        .block3 {
+            width: 100%;
+            min-height: 1000px;
+            background-color: rgb(5, 20, 5);
+            margin: 0;
+            text-align: center;
+            background-image: url('./bodyback.jpg');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.7;
+            border: 5px solid rgb(13, 11, 11);
+            padding: 10px 10px 30px;
+        }
+
+        .footer {
+            width: 100%;
+            min-height: 200px;
+            background-color: rgb(7, 11, 7);
+            margin: 0;
+            color: white;
+            padding: 20px 16px;
+        }
+
+        .block4 {
+            width: 100%;
+            height: 40px;
+            margin-top: -20px;
+            text-align: center;
+            
+        }
+
+        .block5,
+        .block6,
+        .block7 {
+            width: 100%;
+            min-height: 300px;
+            display: flex;
+            align-items: stretch;
+            margin: 0 auto 18px;
+            text-align: center;
+            background-color: rgb(246, 240, 48);
+            border: 2px solid rgb(216, 248, 74);
+            border-radius: 12px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .block5 img,
+        .block6 img,
+        .block7 img {
+            width: 50%;
+            height: 100%;
+            min-height: 220px;
+            object-fit: cover;
+        }
+
+        .block5 h1,
+        .block6 h1,
+        .block7 h1 {
+            width: 50%;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgb(14, 7, 7);
+            opacity: 0.8;
+            padding: 16px;
+        }
+
+        @media (min-width: 769px) and (max-width: 1200px) {
+            .block2 h2 {
+                gap: 18px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .block1,
+            .block2 {
+                width: 100%;
+            
+            }
+
+            .block1 {
+                height: 80px;
+            }
+
+            .block1 img {
+                height: 80px;
+            }
+
+            .block2 {
+                height: auto;
+            }
+
+            .block2 h2 {
+                justify-content: center;
+                padding: 12px 10px;
+                gap: 10px 16px;
+            }
+
+            .logout-menu a {
+                position: static;
+                display: block;
+                margin-top: 8px;
+            }
+
+            .block3 {
+                width: 100%;
+                min-height: auto;
+                padding: 15px 10px 20px;
+            }
+
+            .block4 {
+                height: auto;
+                margin-top: 0;
+            }
+
+            .block5,
+            .block6,
+            .block7 {
+                flex-direction: column;
+                min-height: auto;
+                margin-top: 10px;
+            }
+
+            .block5 img,
+            .block6 img,
+            .block7 img,
+            .block5 h1,
+            .block6 h1,
+            .block7 h1 {
+                width: 100%;
+            }
+
+            .block5 img,
+            .block6 img,
+            .block7 img {
+                height: 220px;
+            }
+
+            .block5 h1,
+            .block6 h1,
+            .block7 h1 {
+                min-height: 120px;
+                padding: 14px;
+            }
+
+            .footer {
+                width: 100%;
+                margin: 5px 0 0;
+            }
+        }
+    </style>
+</head>
+<body style="background-color: rgb(5, 20, 5);">
+    
+
+<div class="container">
+    <div class="block1"><img src="pngwing.com.png">
+    </div>
+    <div class="block2">
+      <h2> <a href="home.html">Home</a>
+        
+        <a href="menu.html">Menu</a>
+         <a href="order.html">Order</a>
+                <details class="logout-menu">
+                    <summary aria-label="Open account menu">&#9776;</summary>
+                    <a href="index.html">Log out</a>
+                </details>
+
+      </h2>
+      
+    </div>
+</div>
+<div class="block3">
+    <div class="block4">
+        <h1 style="color: rgb(103, 4, 24); text-align: center; opacity: 0.8;">WELCOME</h1>
+      
+    </div>
+    <div class="block5">
+        <img src="ra.jpg" alt="Restaurant dining area">
+        <h1>Enjoy the Best Dining Experience</h1>
+    </div>
+    <div class="block4">
+        
+      
+    </div>
+    <div class="block6">
+        <img src="fa.jpg" alt="Restaurant dining area">
+        <h1>World best Spicy Food</h1>
+    </div>
+
+ <div class="block7">
+        <img src="solo.jpg" alt="Restaurant dining area">
+        <h1>World best Chicken food and tasty dishes</h1>
+    </div>
+
+</div>
+<div class="footer">
+      <h2 style="text-align: center;">  About us:</h2>
+        <h2>📞 Customer Care</h2>
+
+<p>📧 Email: fsaifi1227@gmail.com</p>
+
+<p>📱 Phone: +91  6395355632</p>
+
+<p>🕐 Support Time: 10:00 AM - 10:00 PM</p>
+    </h2>
+</div>
+</body>
+</html>
