@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>div layout</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .header {
+            width: 100%;
+            min-height: 100px;
+            padding: 12px clamp(16px, 4vw, 48px);
+            background-color: rgb(186, 97, 137);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+        }
+
+        .header img {
+            display: block;
+            width: 150px;
+            height: 76px;
+            object-fit: contain;
+        }
+
+        .main-nav {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: clamp(12px, 3vw, 30px);
+        }
+
+        .main-nav a {
+            color: white;
+            font-size: 1rem;
+            font-weight: bold;
+            text-decoration: none;
+            white-space: nowrap;
+        }
+
+        .main-nav a:hover,
+        .main-nav a:focus-visible {
+            text-decoration: underline;
+        }
+
+        .block5 {
+            width: 100%;
+            height: 100px;
+            background-color: rgba(20, 32, 35, 0.738);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .block5 h2 {
+            margin: 0;
+        }
+
+        .main-section {
+            width: 100%;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.15fr 1fr;
+            gap: 20px;
+            padding: 10px;
+        }
+
+        .block2,
+        .feedback {
+            background-image: url('./bodyback.jpg');
+            background-size: cover;
+            background-position: center;
+            border: 2px solid rgb(119, 33, 33);
+            border-radius: 12px;
+            padding: 20px;
+            min-height: 500px;
+            color: white;
+        }
+
+        .block2 h2,
+        .feedback h2 {
+            text-align: center;
+            margin-top: 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+        }
+
+        form {
+            width: 100%;
+        }
+
+        .form-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px 20px;
+            align-items: center;
+            margin: 12px 0;
+        }
+
+        .form-row label {
+            min-width: 120px;
+            font-weight: bold;
+        }
+
+        .form-row input,
+        .form-row select,
+        textarea {
+            flex: 1;
+            min-width: 180px;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+        }
+
+        textarea {
+            width: 100%;
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            display: block;
+            margin: 20px auto 0;
+            padding: 12px 30px;
+            color: white;
+            background-color: rgb(102, 71, 227);
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .feedback p {
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .footer {
+            width: 100%;
+            margin: 15px 0 20px;
+            background-color: rgb(1, 1, 5);
+            color: white;
+            padding: 20px;
+            border-radius: 0;
+           
+        }
+
+        .footer h2,
+        .footer h3,
+        .footer p {
+            margin: 8px 0;
+        }
+
+        @media (max-width: 900px) {
+            .container {
+                width: 100%;
+            }
+
+            .header,
+            .block5 {
+                width: 100%;
+            }
+
+            .main-section {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .header {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .header img {
+                width: 130px;
+                height: 64px;
+            }
+
+            .main-nav {
+                width: 100%;
+                justify-content: center;
+                color: black;
+            }
+
+            .block5 h2 {
+                font-size: 1.2rem;
+            }
+
+            .form-row {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .form-row label,
+            .form-row input,
+            .form-row select {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header" style="text-align: center;">
+                        <img src="pngwing.com.png" alt="Website logo">
+                        <nav class="main-nav" aria-label="Main navigation">
+                                <a href="home.html">Home</a>
+                                <a href="order.html" aria-current="page">Order</a>
+                                <a href="menu.html">Menu</a>
+                        </nav>
+        </div>
+        
+
+     
+    </div>
+    <div class="main-section">
+        <div class="block2">
+            <form>
+                <h2>What do you want?</h2>
+
+                <div class="form-row">
+                    <label>Enter name:</label>
+                    <input type="text" name="Enter your item" placeholder="Enter name">
+                </div>
+
+                <div class="form-row">
+                    <label>Quantity:</label>
+                    <select>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                    </select>
+                </div>
+
+                <div class="form-row">
+                    <label>Select item:</label>
+                    <select>
+                      <option>Chicken Biryani</option>
+                        <option>Chicken Tikka</option>
+                        <option>Chilli Chicken</option>
+                        <option>Chicken Korma</option>
+                        <option>Kadhai Chicken</option>
+                        <option>Tandoori Chicken</option>
+                        <option>Butter Chicken</option>
+                        <option>Hot & Spicy Wings</option>
+                        <option>Masala Momos</option>
+                        <option>Pizza</option>
+                        <option>mutton rogan josh</option>
+                        <option>mutton curry</option>
+                        <option>Paneer</option>
+                        <option>Rajma</option>
+                        <option>Jeera Rice</option>
+                        <option>Fruit Salad</option>
+                        <option>Rasgulla</option>
+                        <option>Jalebi</option>
+                    </select>
+                </div>
+
+                <h2>Address</h2>
+
+                <div class="form-row">
+                    <label>District:</label>
+                    <input type="text" placeholder="Enter district">
+                </div>
+
+                <div class="form-row">
+                    <label>Vill, city:</label>
+                    <input type="text" placeholder="Enter vill, city">
+                </div>
+
+                <div class="form-row">
+                    <label>House no.:</label>
+                    <input type="text" placeholder="Enter house">
+                </div>
+
+                <button class="submit-btn" type="submit">Submit</button>
+            </form>
+        </div>
+
+        <div class="feedback">
+            <h2>Feedback</h2>
+            <p>We would like to hear your feedback about our services.</p>
+            <textarea placeholder="Enter your feedback here"></textarea>
+            <button class="submit-btn" type="button">Submit Feedback</button>
+        </div>
+    </div>
+
+    <div class="footer">
+        <h2 style="color: rgb(252, 248, 248); text-align: center;">About us:</h2>
+        <h3>📞 Customer Care</h3>
+        <p>📧 Email: fsaifi1227@gmail.com</p>
+        <p>📱 Phone: +91 6395355632</p>
+        <p>🕐 Support Time: 10:00 AM - 10:00 PM</p>
+    </div>
+</body>
+</html>
