@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>My Website</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            min-height: 100vh;
+            background-image: url("thanks.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 24px 16px;
+        }
+        .login.box {
+            width: min(100%, 400px);
+            padding: clamp(20px, 5vw, 30px);
+            text-align: center;
+            border: 2px solid rgba(45, 72, 173, 0.5);
+            border-radius: 15px;
+            background-color: rgba(143, 89, 89, 0.2);
+            backdrop-filter: blur(10px);
+        }
+        .login.box h1 {
+            margin: 14px 0;
+            color: white;
+            font-size: clamp(16px, 2.4vw, 21px);
+            font-weight: 600;
+        }
+        .login.box input {
+            width: min(100%, 240px);
+            padding: 10px;
+            margin: 8px 0 0 8px;
+            border: none;
+            border-radius: 8px;
+            outline: none;
+        }
+        .login.box button {
+            cursor: pointer;
+            color: rgb(177, 216, 104);
+        }
+
+        @media (max-width: 600px) {
+            .login.box h1 {
+                text-align: left;
+            }
+
+            .login.box input {
+                display: block;
+                width: 100%;
+                margin: 8px 0 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="login box">
+        <h2 style="color: white; font-size: clamp(24px, 5vw, 30px); text-align: center;">
+            Login
+        </h2>
+        <h1>Username: <input id="username" type="text" placeholder="Username"></h1><br>
+        <h1>Password: <input id="password" type="password" placeholder="password"></h1><br>
+        <button id="loginBtn" type="button" style="height: 30px; width: 30%; color: rgb(0, 0, 19); background-color: rgba(45, 39, 208, 0.656); border-radius: 8px; cursor: pointer; margin-top: 20px; color: white;">Login</button><br>
+        <h3 style="margin-top: 30px;"> <a href="register.html" style="text-decoration: none; color: white; font-size: 20px; margin-top: 20px;">sign up?</a> </h3>
+    </div>
+
+    
+</body>
+</html>
